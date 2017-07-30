@@ -1,0 +1,31 @@
+{
+  "name": "ebatis",
+  "version": "1.0.0",
+  "description": "Ebatis is the framework of a node.js relational database.",
+  "dependencies": {
+    "mysql": "~2.13.0",
+    "xmlreader": "^0.2.3"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muzin/ebatis.git"
+  },
+  "keywords": [
+    "ebatis",
+    "Ebatis",
+    "mysql",
+    "database"
+  ],
+  "author": "muzin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muzin/ebatis/issues"
+  },
+  "homepage": "https://github.com/muzin/ebatis#readme"
+}
