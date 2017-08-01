@@ -1,7 +1,7 @@
 
 var config = {
 
-    datasource : [
+    dataSources : [
         {
             host : '',
             port : '',
@@ -15,12 +15,24 @@ var config = {
 
     // or
 
-    datasource : {
+    dataSources : {
+        "$name" : 'database1',
+        "$type" : 'mysql',
         host : '',
         port : '',
         username : '',
         password : ''
-    }
+    },
+
+    mappers : [
+        'classpath:/conf/ebatisConfig.'
+    ],
+    mapperPackage : [
+
+    ],
+    // or
+    mapperPackage : '*/*'
+
 
 }
 
