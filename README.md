@@ -1,2 +1,2 @@
 # ebatis
-ebatis is node.js connection to database.
+Ebatis is a lightweight framework for node.js relational databases.
