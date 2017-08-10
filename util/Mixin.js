@@ -2,15 +2,19 @@
  * Created by muzin on 17-8-2.
  */
 
+/**
+ * @deprecated
+ * @type {{extend: Mixin.extend, extends: Mixin.extends}}
+ */
 var Mixin = {
 
     // single inheritance
     extend : function (destClass, srcClass, methods) {
         var srcProto  = srcClass.prototype;
         var destProto = destClass.prototype ;
-        for (var i=0; i<methods.length; i++) {
-            var method = methods[i];
-            if (!destProto[method]) {
+        for (var method in srcProto) {
+            if(method == '__proto__') continue;
+            if (!(method in destProto)) {
                 destProto[method] = srcProto[method];
             }
         }
