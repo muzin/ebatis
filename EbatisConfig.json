@@ -1,0 +1,29 @@
+{
+  "datasource" : [
+
+      {
+        "$name" : 'database1'
+        "$type" : 'mysql',
+        host : '',
+        port : '',
+        username : '',
+        password : ''
+      },
+      {
+
+      }
+  ],
+
+    // or
+
+    datasource : {
+      "$name" : 'database1'
+      "$type" : 'mysql',
+      host : '',
+      port : '',
+      username : '',
+      password : ''
+    }
+  ]
+
+}
