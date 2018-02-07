@@ -25,7 +25,7 @@ process.on('uncaughtException',function(e){
 
 ebatis.finish(function(){
     console.log('finish');
-console.time('use time');
+    console.time('use time');
     var sqlChain = SqlChainFactory.createSqlChain();
     var getAllUsers = sqlChain.getMapper('user.getAllUsers');
 

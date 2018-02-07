@@ -29,8 +29,8 @@ ebatis.finish(()=>{
                 })
                 .end(function(err, scope){
                     if(count == 2999) {
-                        console.log(count)
-                        console.timeEnd('used time')
+                        console.log(count);
+                        console.timeEnd('used time');
                     }
                 })
 
