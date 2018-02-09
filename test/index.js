@@ -5,8 +5,11 @@ var ebatis_config   = require('./ebatisConfig');
 var UserMapper      = require('./user');
 
 var ebatis = Ebatis();
+
 ebatis.setRootPath(__dirname);
-ebatis.loadConfig(ebatis_config);
+
+//ebatis.loadConfig(ebatis_config);
+ebatis.loadConfigFile('./ebatis_config.yml');
 
 process.on('uncaughtException',function(e){
     console.log(e.stack);
@@ -36,41 +39,27 @@ console.time('g sql')
     let s = getAllUsers.toFunction();
     console.timeEnd('g sql');
     sqlChain
-        .exec(UserMapper.getUsers({id : 100}),function(err, result){
-            console.log('get Users')
-            console.log(result);
-        })
-        .exec('select * from t_user where id = 2', function(err ,result){
-            console.log('two');
-            console.timeEnd('one');
-            console.time('two');
-            this.$scope.four = result;
-
-        })
+        .exec(UserMapper.getUsers({id : 100}))
+        .exec('select * from t_user where id = 2')
         .exec(s, function(err,result){
             console.log('getAllUsers');
 
-            //throw 'break'
-            console.timeEnd('two')
 
-setTimeout(function(){
-    sqlChain.exec(s, function(err,result){
-        console.log('getAllUsers1');
-
-        //throw 'break'
-        console.timeEnd('two')
+            setTimeout(function(){
+                sqlChain.exec(s, function(err,result){
+                    console.log('getAllUsers1');
 
 
-    })
-},1000)
+                    sqlChain.close();
+                })/*.end(function(err, scope){
+                    console.log('end');
+                    console.log(scope);
+                    console.timeEnd('use time');
+                });*/
+            },3000)
 
-
-        })
-        .end(function(err, scope){
-            console.log('end');
-            console.log(scope);
-            console.timeEnd('use time');
         });
+
 
     /*(async function(){
         try {

@@ -5,66 +5,66 @@
 let userMapper = {
 
 	/**
-	 * @returns {{sql: string, values: Array}}
+	 * @returns {MapperInterface}
 	 */
 	getAllUsers : function getAllUsers () { 
-		return {sql : '', values : []};
+		return { };
 	},
 
 	/**
-	 * @returns {{sql: string, values: Array}}
+	 * @returns {MapperInterface}
 	 */
 	getUsers : function getUsers (user) { 
-		return {sql : '', values : []};
+		return { };
 	},
 
 	/**
-	 * @returns {{sql: string, values: Array}}
+	 * @returns {MapperInterface}
 	 */
 	getAllUsers1 : function getAllUsers1 () { 
-		return {sql : '', values : []};
+		return { };
 	},
 
 	/**
-	 * @returns {{sql: string, values: Array}}
+	 * @returns {MapperInterface}
 	 */
 	addUser : function addUser (user) { 
-		return {sql : '', values : []};
+		return { };
 	},
 
 	/**
-	 * @returns {{sql: string, values: Array}}
+	 * @returns {MapperInterface}
 	 */
 	getUsersByType : function getUsersByType (user, type) { 
-		return {sql : '', values : []};
+		return { };
 	},
 
 	/**
-	 * @returns {{sql: string, values: Array}}
+	 * @returns {MapperInterface}
 	 */
 	addUsers : function addUsers (users) { 
-		return {sql : '', values : []};
+		return { };
 	},
 
 	/**
-	 * @returns {{sql: string, values: Array}}
+	 * @returns {MapperInterface}
 	 */
 	updateUser : function updateUser (user) { 
-		return {sql : '', values : []};
+		return { };
 	},
 
 	/**
-	 * @returns {{sql: string, values: Array}}
+	 * @returns {MapperInterface}
 	 */
 	deleteUser : function deleteUser (user) { 
-		return {sql : '', values : []};
+		return { };
 	},
 
 	/**
-	 * @returns {{sql: string, values: Array}}
+	 * @returns {MapperInterface}
 	 */
 	getConvInfo : function getConvInfo (lid, cid) { 
-		return {sql : '', values : []};
+		return { };
 	},
 };
 

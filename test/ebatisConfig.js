@@ -38,7 +38,7 @@ exports = module.exports = {
 
         transaction : true,                                 //          是否开启事务，默认开启事务
 
-        //timeout : 3000,                                       // 每个sqlchain执行的超时时间，负数为不超时 （默认：30000 ms）
+        timeout : 5000,                                       // 每个sqlchain执行的超时时间，负数为不超时 （默认：30000 ms）
 
     },
 
