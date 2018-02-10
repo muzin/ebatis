@@ -1,4 +1,4 @@
-# Ebatis Configuration
+# Ebatis Configuration (Ebatis 配置)
 
 
 ### Datasource

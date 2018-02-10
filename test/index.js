@@ -30,13 +30,19 @@ ebatis.finish(function(){
     console.log('finish');
     console.time('use time');
     var sqlChain = SqlChainFactory.createSqlChain();
-    var getAllUsers = sqlChain.getMapper('user.getAllUsers');
+    var getUsers = sqlChain.getMapper('user.getUsers');
 
     console.time('one')
 
 
+    getUsers.param.promise({id : 20}).then((list)=>{
+        console.log('list');
+        console.log(list);
+    });
+
+
 console.time('g sql')
-    let s = getAllUsers.toFunction();
+    let s = getUsers.toFunction()({id:20});
     console.timeEnd('g sql');
     sqlChain
         .exec(UserMapper.getUsers({id : 100}))
