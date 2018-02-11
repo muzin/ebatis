@@ -9,7 +9,7 @@ Note：
 
 2. currently only support the Mysql database.
 
-[切换为中文](./zh_cn/index.md)
+[切换为中文](./docs/zh_cn/index.md)
 
 ### How to use
 
