@@ -6,6 +6,7 @@
 
     <sql id="field_all_names">*</sql>
 
+    <!-- get all user  -->
     <select id="getAllUsers" >
         SELECT
         <include ref="field_all_names"/>
@@ -15,9 +16,9 @@
 
     <select id="getUsers" param="user">
         SELECT
-        <include ref="field_all_names"/>
+            <include ref="field_all_names"/>
         FROM
-        <include ref="table_name"/>
+            <include ref="table_name"/>
         <where>
             <if test="!~[null, ''].indexOf( user.id )">
                 id &lt;= ${ user.id }
@@ -25,17 +26,7 @@
         </where>
     </select>
 
-
-    <select id="getAllUsers1" param="">
-        SELECT
-        *
-        FROM
-        t_user
-    </select>
-
-    <!--
-
-    -->
+    <!-- insert user -->
     <insert id="addUser" param="user">
         INSERT INTO t_user
         <for suffix="(" separate=", " prefix=")" var="item of Object.keys(user) ">
@@ -46,23 +37,23 @@
         </for>
     </insert>
 
-
+    <!-- get users by type-->
     <select id="getUsersByType" param="user, type">
         SELECT
         *
         FROM
         t_user
         <where>
-            <choose var="type">
-                <when test="1">
+            <choose>
+                <when test="type == 1">
                     <if test="user.name != null">
                         type = 1
                     </if>
                 </when>
-                <when test="2">
+                <when test="type == 2">
                     type = 2
                 </when>
-                <when test="3">
+                <when test="type == 3">
                     type = 3
                 </when>
                 <otherwise>
@@ -72,6 +63,7 @@
         </where>
     </select>
 
+    <!-- add users -->
     <insert id="addUsers" param="users">
         INSERT INTO t_user
         <for suffix="(" separate=", " prefix=")" var="item of Object.keys(users[0])">
@@ -85,10 +77,10 @@
         </for>
     </insert>
 
-
+    <!-- update user info -->
     <update id="updateUser" param="user">
         update
-            t_user
+            <include ref="table_name" />
         <set>
             <if test="user.name != null and user.name != ''">
                 name = ${ user.name }
@@ -106,12 +98,12 @@
 
     </update>
 
-    <delete id="deleteUser" param="user">
+    <!-- delete user -->
+    <delete id="deleteUser" param="id">
         DELETE FROM
-        t_user
+            <include ref="table_name" />
         WHERE
-        id = ${ user }
+            id = ${ id }
     </delete>
-
 
 </sqls>

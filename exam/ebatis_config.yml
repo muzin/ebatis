@@ -1,0 +1,18 @@
+# ebatis config
+
+datasource :
+  _name : default
+  _type : mysql
+  _mode : pool                              # mode  connection | pool | cluster, default connection
+  hostname : 127.0.0.1
+  user : root
+  password : muzin123admin
+  database : test
+  connectionLimit : 50
+
+sql :
+  mapper : ./*.xml
+
+sqlchain :
+  transaction : true
+  timeout : 3000

@@ -59,13 +59,6 @@ let userMapper = {
 	deleteUser : function deleteUser (user) { 
 		return { };
 	},
-
-	/**
-	 * @returns {MapperInterface}
-	 */
-	getConvInfo : function getConvInfo (lid, cid) { 
-		return { };
-	},
 };
 
 exports = module.exports = userMapper;

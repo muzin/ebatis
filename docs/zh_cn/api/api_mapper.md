@@ -1,5 +1,6 @@
 # Mapper Api
 
+### Field：
 #### name *[Field]*
 Mapper的名称
 
@@ -12,6 +13,7 @@ Mapper的全名
 #### connection *[Field]*
 Mapper对象对应的数据库连接
 
+### Method：
 #### toFunction() => Function
 获取Mapper对应的sql生成函数
 
@@ -27,7 +29,7 @@ args : sql生成函数所需的参数
 
 callback : 执行完毕的回调函数
 
-事例：
+示例：
 ```js
 var sqlChain = SqlChainFactory.createSqlChain();
 var getUsers = sqlChain.getMapper('user.getUsers');
@@ -42,7 +44,7 @@ getUsers.param({id : 10},(err, result)=>{
 #### param.promise([...args:any]) => Promise
 param函数Promise化 
 
-事例：
+示例：
 ```js
 var sqlChain = SqlChainFactory.createSqlChain();
 var getUsers = sqlChain.getMapper('user.getUsers');

@@ -10,6 +10,7 @@ ebatis.setRootPath(__dirname);
 
 #### loadConfig(config : object) => void
 加载配置信息。
+配置文件
 
 ```js
 ebatis.loadConfig(ebatis_config);
@@ -25,6 +26,10 @@ ebatis.loadConfigFile('./ebatis_config.js');
 ebatis.loadConfigFile('./ebatis_config.json');
 ebatis.loadConfigFile('./ebatis_config.yaml');
 ```
+#### dev(bool:boolean) => void
+开启开发者模式
+
+在开发者模式下，如果动态sql的xml文件进行了修改，将在xml的目录下，重新生成动态sql所对应的Mapper对象
 
 #### getMapper(fullname:string) => MapperInterface
 获取动态sql的对应的Mapper对象，用于数据查询.

@@ -15,5 +15,13 @@
             t_conversation.id = ${ cid }
     </select>
 
+    <delete id="deleteUser" param="user">
+        DELETE FROM
+        t_user
+        WHERE
+        id = ${ user }
+    </delete>
+
+
 
 </sqls>

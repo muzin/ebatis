@@ -199,6 +199,9 @@ datasource :
 
 sql :                                               
   mapper : ./*.xml
+  mapper :
+    - : ./*.xml
+    - : ./*.xml
 
 sqlchain :
   transaction : true

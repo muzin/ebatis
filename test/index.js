@@ -10,6 +10,7 @@ ebatis.setRootPath(__dirname);
 
 //ebatis.loadConfig(ebatis_config);
 ebatis.loadConfigFile('./ebatis_config.yml');
+ebatis.dev(true);
 
 process.on('uncaughtException',function(e){
     console.log(e.stack);
