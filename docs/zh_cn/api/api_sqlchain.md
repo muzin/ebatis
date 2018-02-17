@@ -29,6 +29,9 @@ SqlChain执行完毕后设置的回调函数, `end`函数调用后会立即执�
 
 建议在SqlChain声明完最后一个需要执行的sql后，声明`end`函数的调用
 
+#### throw(err, data)
+在执行`exec`函数中，如果想让SqlChain停下来，可以在`exec`函数中调用`throw`函数。调用`throw`后，如果SqlChain开启事务，将会会回滚；
+如果指定了`end`函数的回调函数，将会执行`end`函数
 
 #### resetTimeout(timeout:number)
 重置超时时间
