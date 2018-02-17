@@ -43,9 +43,17 @@ SqlChain执行完毕后设置的回调函数, `end`函数调用后会立即执�
 
 
 #### commit([callback:function])
+在SqlChain开启事务后，需要执行`commit`函数来提交数据库的操作。
 
 
 #### rollback([callback:function])
+在SqlChain开启事务后，如果需要回滚，执行`rollback`函数来回滚。
+SqlChain开启事务后，触发回滚的时机：
+1. 当执行的sql有误;
+2. 当sql执行后的回调函数中有异常;
+3. 当SqlChain设置超时并且在规定时间内没有执行正常执行完所有sql时
 
 
 #### close([callback:function])
+关闭SqlChain。
+如果SqlChain开启事务，关闭后会自动提交对数据库的操作，释放数据库链接。

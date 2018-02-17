@@ -9,9 +9,9 @@
     <!-- get all user  -->
     <select id="getAllUsers" >
         SELECT
-        <include ref="field_all_names"/>
+            <include ref="field_all_names"/>
         FROM
-        <include ref="table_name"/>
+            <include ref="table_name"/>
     </select>
 
     <select id="getUsers" param="user">
