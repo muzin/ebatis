@@ -1,7 +1,7 @@
 {
   "name": "ebatis",
   "version": "1.0.1",
-  "description": "Ebatis is a relational database data access framework For Node.js. It's like mybatis.",
+  "description": "Ebatis is a relational database data access framework For Node.js. It's like mybatis. The biggest feature of ebatis is to support dynamic SQL, transaction control, simple configuration and easy to handle. ",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib",
