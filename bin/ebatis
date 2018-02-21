@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+
+
+var p = process;
+
+console.log(__filename)
+
+console.log(p.cwd())

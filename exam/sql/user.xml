@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sqls namespace="user" >
+
+    <sql id="table_name">t_user</sql>
+
+    <sql id="field_all_names">*</sql>
+
+    <!-- get all user  -->
+    <select id="getAllUsers" >
+        SELECT
+            <include ref="field_all_names"/>
+        FROM
+            <include ref="table_name"/>
+    </select>
+
+    <select id="getUsers" param="user">
+        SELECT
+            <include ref="field_all_names"/>
+        FROM
+            <include ref="table_name"/>
+        <where>
+            <if test="!~[null, ''].indexOf( user.id )">
+                id &lt;= ${ user.id }
+            </if>
+        </where>
+    </select>
+
+    <!-- insert user -->
+    <insert id="addUser" param="user">
+        INSERT INTO t_user
+        <for suffix="(" separate=", " prefix=")" var="item of Object.keys(user) ">
+            #{ item }
+        </for>
+        <for suffix=" VALUES(" separate=", " prefix=")" var="item of Object.values(user) ">
+            ${ item }
+        </for>
+    </insert>
+
+    <!-- get users by type-->
+    <select id="getUsersByType" param="user, type">
+        SELECT
+        *
+        FROM
+        t_user
+        <where>
+            <choose>
+                <when test="type == 1">
+                    <if test="user.name != null">
+                        type = 1
+                    </if>
+                </when>
+                <when test="type == 2">
+                    type = 2
+                </when>
+                <when test="type == 3">
+                    type = 3
+                </when>
+                <otherwise>
+                    type = 0
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+
+    <!-- add users -->
+    <insert id="addUsers" param="users">
+        INSERT INTO t_user
+        <for suffix="(" separate=", " prefix=")" var="item of Object.keys(users[0])">
+            #{ item }
+        </for>
+        VALUES
+        <for separate=", " var="user of users">
+            <for suffix="(" separate=", " prefix=")" var="item of Object.values(user)">
+                ${ item }
+            </for>
+        </for>
+    </insert>
+
+    <!-- update user info -->
+    <update id="updateUser" param="user">
+        update
+            <include ref="table_name" />
+        <set>
+            <if test="user.name != null and user.name != ''">
+                name = ${ user.name }
+            </if>
+            <if test="user.age != null and user.age != ''">
+                age = ${ user.age }
+            </if>
+        </set>
+        <where>
+            id = ${ user.id }
+            <if test="user.name != null">
+                name = ${ user.name }
+            </if>
+        </where>
+
+    </update>
+
+    <!-- delete user -->
+    <delete id="deleteUser" param="id">
+        DELETE FROM
+            <include ref="table_name" />
+        WHERE
+            id = ${ id }
+    </delete>
+
+</sqls>

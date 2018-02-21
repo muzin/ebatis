@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sqls namespace="lawyer" >
+
+    <select id="getConvInfo" param="lid, cid">
+        SELECT
+            convtype, t_menu.lawyer = ${ lid } self
+        FROM
+            t_conversation
+        LEFT JOIN
+            t_order ON t_order.id = t_conversation.`order`
+        LEFT JOIN
+            t_menu ON t_menu.id = t_order.menu
+        WHERE
+            t_conversation.id = ${ cid }
+    </select>
+
+    <delete id="deleteUser" param="user">
+        DELETE FROM
+        t_user
+        WHERE
+        id = ${ user }
+    </delete>
+
+
+
+</sqls>
