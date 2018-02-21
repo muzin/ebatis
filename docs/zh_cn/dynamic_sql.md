@@ -5,6 +5,14 @@
 在程序运行中，会将动态sql的xml生成成js代码，然后解析成js函数，在调用js函数时获取最终sql。
 
 
+> 推荐：文件头部加入`<!DOCTYPE >`
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqls
+    PUBLIC "-//ebatis.muzin.cn//DTD Config 3.0//EN"
+    "https://mithub.oss-cn-beijing.aliyuncs.com/ebatis/ebatis-sqls.dtd">
+```
+
 ### 支持标签
 
 - sqls 

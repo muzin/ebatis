@@ -7,10 +7,10 @@
 	Email  : sirius1@aliyun.com       
 
 -->
-<!ELEMENT sqls ( sql* | insert* | update* | delete* | select* )*>
+<!ELEMENT sqls ( sql* | insert* | update* | delete* | select* )+>
 <!ATTLIST sqls
 namespace CDATA #IMPLIED
-databaseid CDATA #IMPLIED
+database CDATA #IMPLIED
 >
 
 <!ELEMENT sql (#PCDATA | include | where | set | for | choose | if )*>
@@ -56,7 +56,7 @@ databaseid CDATA #IMPLIED
 <!-- Dynamic -->
 <!ELEMENT include (#PCDATA)>
 <!ATTLIST include
-refid CDATA #REQUIRED
+ref CDATA #REQUIRED
 param CDATA #IMPLIED
 >
 
