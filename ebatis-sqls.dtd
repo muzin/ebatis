@@ -17,6 +17,7 @@ database CDATA #IMPLIED
 <!ATTLIST sql
 id CDATA #REQUIRED
 param CDATA #IMPLIED
+desc CDATA #IMPLIED
 >
 
 
@@ -27,6 +28,7 @@ param CDATA #IMPLIED
 result CDATA #IMPLIED
 timeout CDATA #IMPLIED
 databaseid CDATA #IMPLIED
+desc CDATA #IMPLIED
 >
 
 <!ELEMENT insert (#PCDATA | include | where | set | for | choose | if )*>
@@ -35,6 +37,7 @@ id CDATA #REQUIRED
 param CDATA #IMPLIED
 timeout CDATA #IMPLIED
 databaseid CDATA #IMPLIED
+desc CDATA #IMPLIED
 >
 
 <!ELEMENT update (#PCDATA | include | where | set | for | choose | if )*>
@@ -43,6 +46,7 @@ id CDATA #REQUIRED
 param CDATA #IMPLIED
 timeout CDATA #IMPLIED
 databaseid CDATA #IMPLIED
+desc CDATA #IMPLIED
 >
 
 <!ELEMENT delete (#PCDATA | include | where | set | for | choose | if )*>
@@ -51,6 +55,7 @@ id CDATA #REQUIRED
 param CDATA #IMPLIED
 timeout CDATA #IMPLIED
 databaseid CDATA #IMPLIED
+desc CDATA #IMPLIED
 >
 
 <!-- Dynamic -->

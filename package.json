@@ -1,7 +1,7 @@
 {
   "name": "ebatis",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Ebatis is a relational database data access framework For Node.js. It's like mybatis.",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib",
