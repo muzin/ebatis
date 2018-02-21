@@ -11,8 +11,9 @@ datasource :
   connectionLimit : 50
 
 sql :
-  mapper : ./*.xml
+  mapper : ./sql/*.xml
 
 sqlchain :
   transaction : true
   timeout : 3000
+  printsql : false

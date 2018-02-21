@@ -14,7 +14,8 @@
     },
     "sqlchain" : {
         "transaction" : true,
-        "timeout"     : 5000
+        "timeout"     : 5000,
+        "printsql"    : false
     }
 }
 

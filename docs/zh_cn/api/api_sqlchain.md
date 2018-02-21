@@ -7,7 +7,7 @@ SqlChain继承了EventEmitter,基于事件去执行。每个SqlChain都是异步
 SqlChain中有$scope属性，可以用来存放查询出来的数据。
 
 
-#### exec((sql:string[[,param:array], callback:function])
+#### exec(sql:string[[,param:array], callback:function])
 
 exec函数支持三种格式的参数：
 
@@ -23,11 +23,14 @@ exec函数支持三种格式的参数：
 
     func:function
 
+#### exec.promise(sql:string[[,param:array])
+`exec`函数Promise化。
+参数同`exec`函数
 
 #### end([callback:function])
 SqlChain执行完毕后设置的回调函数, `end`函数调用后会立即执行。
 
-建议在SqlChain声明完最后一个需要执行的sql后，声明`end`函数的调用
+建议在SqlChain声明完最后一个需要执行的sql后，声明`end`函数的调用。
 
 #### throw(err, data)
 在执行`exec`函数中，如果想让SqlChain停下来，可以在`exec`函数中调用`throw`函数。调用`throw`后，如果SqlChain开启事务，将会会回滚；

@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@code.aliyun.com:sirius_coder/ebatis.git"
+    "url": "https://github.com/muzin/ebatis.git"
   },
   "keywords": [
     "ebatis",
     "mysql",
-    "dyna"
+    "dynamic sql"
   ],
   "author": "sirius",
   "license": "MIT",

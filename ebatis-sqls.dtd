@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+
+	Copyright 2017 the original author or authors.
+
+	Author : Sirius
+	Email  : sirius1@aliyun.com       
+
+-->
+<!ELEMENT sqls ( sql* | insert* | update* | delete* | select* )+>
+<!ATTLIST sqls
+namespace CDATA #IMPLIED
+databaseid CDATA #IMPLIED
+>
+
+<!ELEMENT sql (#PCDATA | include | where | set | for | choose | if )*>
+<!ATTLIST sql
+id CDATA #REQUIRED
+param CDATA #IMPLIED
+>
+
+
+<!ELEMENT select (#PCDATA | include | where | set | for | choose | if )*>
+<!ATTLIST select
+id CDATA #REQUIRED
+param CDATA #IMPLIED
+result CDATA #IMPLIED
+timeout CDATA #IMPLIED
+databaseid CDATA #IMPLIED
+>
+
+<!ELEMENT insert (#PCDATA | include | where | set | for | choose | if )*>
+<!ATTLIST insert
+id CDATA #REQUIRED
+param CDATA #IMPLIED
+timeout CDATA #IMPLIED
+databaseid CDATA #IMPLIED
+>
+
+<!ELEMENT update (#PCDATA | include | where | set | for | choose | if )*>
+<!ATTLIST update
+id CDATA #REQUIRED
+param CDATA #IMPLIED
+timeout CDATA #IMPLIED
+databaseid CDATA #IMPLIED
+>
+
+<!ELEMENT delete (#PCDATA | include | where | set | for | choose | if )*>
+<!ATTLIST delete
+id CDATA #REQUIRED
+param CDATA #IMPLIED
+timeout CDATA #IMPLIED
+databaseid CDATA #IMPLIED
+>
+
+<!-- Dynamic -->
+<!ELEMENT include (#PCDATA)>
+<!ATTLIST include
+refid CDATA #REQUIRED
+param CDATA #IMPLIED
+>
+
+
+<!ELEMENT where (#PCDATA | include | where | set | for | choose | if )*>
+<!ELEMENT set (#PCDATA | include | where | set | for | choose | if )*>
+
+<!ELEMENT for (#PCDATA | include | where | set | for | choose | if )*>
+<!ATTLIST for
+var CDATA #REQUIRED
+item CDATA #IMPLIED
+index CDATA #IMPLIED
+suffix CDATA #IMPLIED
+prefix CDATA #IMPLIED
+separator CDATA #IMPLIED
+>
+
+<!ELEMENT choose (when* , otherwise?)>
+<!ELEMENT when (#PCDATA | include | where | set | for | choose | if )*>
+<!ATTLIST when
+test CDATA #REQUIRED
+>
+<!ELEMENT otherwise (#PCDATA | include | where | set | for | choose | if )*>
+
+<!ELEMENT if (#PCDATA | include | where | set | for | choose | if )*>
+<!ATTLIST if
+test CDATA #REQUIRED
+>
+
+

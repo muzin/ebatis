@@ -16,6 +16,7 @@ exports = module.exports = {
     sqlchain : {
         transaction : true,
         timeout : 5000,
+        printsql : false
     }
 };
 

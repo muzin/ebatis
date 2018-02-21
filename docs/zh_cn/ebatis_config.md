@@ -96,7 +96,10 @@ sqlchain : {
     transaction : true,                                         
 
     // 每个sqlchain执行的超时时间，负数为不超时 （默认：30000 ms）
-    timeout : 5000                                     
+    timeout : 5000,
+    
+    // 打印sql代码以及参数和查询出来的结果
+    printsql : true                                     
 
 }
 ```
@@ -156,7 +159,9 @@ exports = module.exports = {
         transaction : true,                                         
     
         // 每个sqlchain执行的超时时间，负数为不超时 （默认：30000 ms）
-        timeout : 5000                                     
+        timeout : 5000,
+        
+        printsql : true                                     
     
     }
 
@@ -181,7 +186,8 @@ exports = module.exports = {
     },
     "sqlchain" : {
         "transaction" : true, 
-        "timeout" : -1
+        "timeout" : -1,
+        "printsql" : true
     }
 }
 ```
@@ -206,4 +212,5 @@ sql :
 sqlchain :
   transaction : true
   timeout : -1
+  printsql : true
 ```
