@@ -17,7 +17,8 @@
   "keywords": [
     "ebatis",
     "mysql",
-    "dynamic sql"
+    "dynamic sql",
+    "mybatis"
   ],
   "author": "sirius",
   "license": "MIT",
