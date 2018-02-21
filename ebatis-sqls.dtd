@@ -7,7 +7,7 @@
 	Email  : sirius1@aliyun.com       
 
 -->
-<!ELEMENT sqls ( sql* | insert* | update* | delete* | select* )+>
+<!ELEMENT sqls ( sql* | insert* | update* | delete* | select* )*>
 <!ATTLIST sqls
 namespace CDATA #IMPLIED
 databaseid CDATA #IMPLIED
@@ -71,7 +71,7 @@ item CDATA #IMPLIED
 index CDATA #IMPLIED
 suffix CDATA #IMPLIED
 prefix CDATA #IMPLIED
-separator CDATA #IMPLIED
+separate CDATA #IMPLIED
 >
 
 <!ELEMENT choose (when* , otherwise?)>
