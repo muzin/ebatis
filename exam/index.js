@@ -42,17 +42,19 @@ ebatis.finish(function(){
 
 
             setTimeout(function(){
-                sqlChain.exec(s, function(err,result){
-                    console.log('getAllUsers1');
+                sqlChain
+                    .exec(s, function(err,result){
+                        console.log('getAllUsers1');
 
 
-                    sqlChain.close();
-                })/*.end(function(err, scope){
+                        sqlChain.close();
+                    })
+                    .end(function(err, scope){
                     console.log('end');
                     console.log(scope);
                     console.timeEnd('use time');
-                });*/
-            },3000)
+                });
+            },3000);
 
         });
 

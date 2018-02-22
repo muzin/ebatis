@@ -11,6 +11,27 @@ Note：
 
 [切换为中文](./zh_cn/index.md)
 
+
+### table of contents
+
+##### [Hello World](./zh_cn/helloworld.md)
+
+##### [Configuration](./zh_cn/ebatis_config.md)
+
+##### [Api](./zh_cn/api/api.md)
+
+###### - [Api Ebatis](./zh_cn/api/api_ebatis.md)
+
+###### - [Api SqlChain](./zh_cn/api/api_sqlchain.md)
+
+###### - [Api SqlChainFactory](./zh_cn/api/api_sqlchainfactory.md)
+
+###### - [Api Mapper](./zh_cn/api/api_mapper.md)
+
+##### [Dynamic Sql](./zh_cn/dynamic_sql.md)
+
+##### [Example](./zh_cn/example.md)
+
 ### How to use
 
 #### Install module:
@@ -101,20 +122,3 @@ sqlchain :
   printsql : true
 ```
 
-### Learn More
-
-#### [Hello World](./zh_cn/helloworld.md)
-
-#### [Configuration](./zh_cn/ebatis_config.md)
-
-#### [Api](./zh_cn/api/api.md)
-
-##### - [Api Ebatis](./zh_cn/api/api_ebatis.md)
-
-##### - [Api SqlChain](./zh_cn/api/api_sqlchain.md)
-
-##### - [Api SqlChainFactory](./zh_cn/api/api_sqlchainfactory.md)
-
-##### - [Api Mapper](./zh_cn/api/api_mapper.md)
-
-#### [Dynamic Sql](./zh_cn/dynamic_sql.md)
