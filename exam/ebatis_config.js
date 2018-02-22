@@ -6,7 +6,7 @@ exports = module.exports = {
         _mode : 'pool',
         hostname : '127.0.0.1',
         user : 'root',
-        password : 'muzin123admin',
+        password : '**********',
         database : 'test',
         connectionLimit : 50
     },
