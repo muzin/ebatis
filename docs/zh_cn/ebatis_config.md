@@ -33,7 +33,7 @@ datasource : {
     _mode : 'pool',                     // 模式支持 connection(单个连接) | pool（连接池） | cluster(集群，暂不支持), 默认模式: connection
     hostname : '127.0.0.1',
     user : 'root',
-    password : 'muzin123admin',
+    password : '**********',
     database : 'test',
     connectionLimit : 50,
     ... 
@@ -47,7 +47,7 @@ datasource : [{
     _mode : 'pool',                     // 模式支持 connection(单个连接) | pool（连接池） | cluster(集群，暂不支持), 默认模式: connection
     hostname : '127.0.0.1',
     user : 'root',
-    password : 'muzin123admin',
+    password : '**********',
     database : 'test',
     connectionLimit : 50,
     ... 
@@ -57,7 +57,7 @@ datasource : [{
     _mode : 'connection',                     // 
     hostname : '127.0.0.1',
     user : 'root',
-    password : 'muzin123admin',
+    password : '**********',
     database : 'test',
     connectionLimit : 50,
     ... 
@@ -116,7 +116,7 @@ exports = module.exports = {
         _mode : 'pool',                     // 模式支持 connection(单个连接) | pool（连接池） | cluster(集群，暂不支持), 默认模式: connection
         hostname : '127.0.0.1',
         user : 'root',
-        password : 'muzin123admin',
+        password : '**********',
         database : 'test',
         connectionLimit : 50,
         ... 
@@ -129,7 +129,7 @@ exports = module.exports = {
             _mode : ' connection', 
             hostname : '127.0.0.1',
             username : 'root',
-            password : 'Muzin123admin',
+            password : '**********',
         },
         {
             _name : 'db2',
@@ -137,7 +137,7 @@ exports = module.exports = {
             _mode : ' connection',
             hostname : '127.0.0.1',
             username : 'root',
-            password : 'Muzin123admin',
+            password : '**********',
         }
     ],
 

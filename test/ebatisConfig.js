@@ -7,7 +7,7 @@ exports = module.exports = {
         _mode : 'pool', // mode  connection | pool | cluster, default connection
         hostname : '127.0.0.1',
         user : 'root',
-        password : 'muzin123admin',
+        password : '**********',
         database : 'test',
         connectionLimit : 50
     },
@@ -19,7 +19,7 @@ exports = module.exports = {
 //         _mode : ' connection', // mode  connection | pool | cluster, default connection
 //         hostname : '127.0.0.1',
 //         username : 'root',
-//         password : 'Muzin123admin',
+//         password : '**********',
 //     }
 // ],
 
