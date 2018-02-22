@@ -103,18 +103,18 @@ sqlchain :
 
 ### Learn More
 
-#### [Hello World](./helloworld.md)
+#### [Hello World](./zh_cn/helloworld.md)
 
-#### [Configuration](./ebatis_config.md)
+#### [Configuration](./zh_cn/ebatis_config.md)
 
-#### [Api](./api/api.md)
+#### [Api](./zh_cn/api/api.md)
 
-##### - [Api Ebatis](./api/api_ebatis.md)
+##### - [Api Ebatis](./zh_cn/api/api_ebatis.md)
 
-##### - [Api SqlChain](./api/api_sqlchain.md)
+##### - [Api SqlChain](./zh_cn/api/api_sqlchain.md)
 
-##### - [Api SqlChainFactory](./api/api_sqlchainfactory.md)
+##### - [Api SqlChainFactory](./zh_cn/api/api_sqlchainfactory.md)
 
-##### - [Api Mapper](./api/api_mapper.md)
+##### - [Api Mapper](./zh_cn/api/api_mapper.md)
 
-#### [Dynamic Sql](./dynamic_sql.md)
+#### [Dynamic Sql](./zh_cn/dynamic_sql.md)
