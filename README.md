@@ -13,21 +13,23 @@ Note：
 
 ### table of contents
 
-#### [Hello World](./docs/zh_cn/helloworld.md)
+##### [Hello World](./zh_cn/helloworld.md)
 
-#### [Configuration](./docs/zh_cn/ebatis_config.md)
+##### [Configuration](./zh_cn/ebatis_config.md)
 
-#### [Api](./docs/zh_cn/api/api.md)
+##### [Api](./zh_cn/api/api.md)
 
-##### - [Api Ebatis](./docs/zh_cn/api/api_ebatis.md)
+###### - [Api Ebatis](./zh_cn/api/api_ebatis.md)
 
-##### - [Api SqlChain](./docs/zh_cn/api/api_sqlchain.md)
+###### - [Api SqlChain](./zh_cn/api/api_sqlchain.md)
 
-##### - [Api SqlChainFactory](./docs/zh_cn/api/api_sqlchainfactory.md)
+###### - [Api SqlChainFactory](./zh_cn/api/api_sqlchainfactory.md)
 
-##### - [Api Mapper](./docs/zh_cn/api/api_mapper.md)
+###### - [Api Mapper](./zh_cn/api/api_mapper.md)
 
-#### [Dynamic Sql](./docs/zh_cn/dynamic_sql.md)
+##### [Dynamic Sql](./zh_cn/dynamic_sql.md)
+
+##### [Example](./zh_cn/example.md)
 
 
 ### How to use

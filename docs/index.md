@@ -30,7 +30,7 @@ Note：
 
 ##### [Dynamic Sql](./zh_cn/dynamic_sql.md)
 
-##### [Example]()
+##### [Example](./zh_cn/example.md)
 
 ### How to use
 

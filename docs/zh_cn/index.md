@@ -12,6 +12,27 @@ ebatis最大的特点是支持动态sql，事务控制，配置简便，易于�
 
 [Change To English](../index.md)
 
+### 目录
+
+##### [Hello World](./helloworld.md)
+
+##### [Configuration](./ebatis_config.md)
+
+##### [Api](./api/api.md)
+
+###### - [Api Ebatis](./api/api_ebatis.md)
+
+###### - [Api SqlChain](./api/api_sqlchain.md)
+
+###### - [Api SqlChainFactory](./api/api_sqlchainfactory.md)
+
+###### - [Api Mapper](./api/api_mapper.md)
+
+##### [Dynamic Sql](./dynamic_sql.md)
+
+##### [Example](./example.md)
+
+
 ### 如何使用
 
 #### 安装模块:
@@ -158,22 +179,3 @@ sqlchain :
 - choose
 - when
 - otherwise
-
-
-### 了解更多
-
-#### [Hello World](./helloworld.md)
-
-#### [Configuration](./ebatis_config.md)
-
-#### [Api](./api/api.md)
-
-##### - [Api Ebatis](./api/api_ebatis.md)
-
-##### - [Api SqlChain](./api/api_sqlchain.md)
-
-##### - [Api SqlChainFactory](./api/api_sqlchainfactory.md)
-
-##### - [Api Mapper](./api/api_mapper.md)
-
-#### [Dynamic Sql](./dynamic_sql.md)
