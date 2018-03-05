@@ -33,6 +33,6 @@ ebatis.dev(true);
         console.log('finish')
         count ++;
         console.log(count);
-    }, 0);
+    }, 1);
 
 })()
