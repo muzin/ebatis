@@ -332,6 +332,7 @@ exports = module.exports = userMapper;
 
 
 #### 3. 编写逻辑代码
+[async/await/Promise版逻辑代码](./docs/zh_cn/index.md)
 ```js
 
 var Ebatis          = require('ebatis');

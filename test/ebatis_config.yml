@@ -4,12 +4,13 @@ datasource :
   _mode : pool                              # mode  connection | pool | cluster, default connection
   hostname : 127.0.0.1
   user : root
-  password : **********
+  password : muzin123admin
   database : test
-  connectionLimit : 50
+  connectionLimit : 100
 
 sql :
   mapper : ./*.xml
 
 sqlchain :
   transaction : true
+  printsql : false
