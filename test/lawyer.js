@@ -10,6 +10,13 @@ let lawyerMapper = {
 	getConvInfo : function getConvInfo (lid, cid) { 
 		return { };
 	},
+
+	/**
+	 * @returns {MapperInterface}
+	 */
+	deleteUser : function deleteUser (user) { 
+		return { };
+	},
 };
 
 exports = module.exports = lawyerMapper;
