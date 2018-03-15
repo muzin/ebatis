@@ -22,7 +22,7 @@ process.on('uncaughtException',function(e){
 
     console.log('finish');
     console.time('use time');
-    for(var i = 0; i < 3000; i++) {
+    for(var i = 0; i < 300000; i++) {
         var sqlChain = SqlChainFactory.createSqlChain();
 
         var users = await sqlChain.exec.promise(UserMapper.getUsers({id: 100}));

@@ -27,7 +27,11 @@ ebatis.dev(true);
         console.log(`_acquiringConnections : ${pool._acquiringConnections.length}`);
         console.log(`_allConnections : ${pool._allConnections.length}`);
         console.log(`_connectionQueue : ${pool._connectionQueue.length}`);
-        console.log(`_freeConnections : ${pool._freeConnections.length}`);
+        console.log(`_freeConnections : ${pool._allConnections.length}`);
+
+        /*if(pool._allConnections.length - pool._allConnections.length > 10){
+            console.log('h')
+        };*/
 
         sqlChain.close();
         console.log('finish')
