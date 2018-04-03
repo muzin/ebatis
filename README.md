@@ -332,7 +332,7 @@ exports = module.exports = userMapper;
 
 
 #### 3. 编写逻辑代码
-[async/await/Promise版逻辑代码](./docs/zh_cn/index.md)
+**Callback式逻辑代码**
 ```js
 
 var Ebatis          = require('ebatis');
@@ -415,5 +415,71 @@ ebatis.finish(function(){
         }
     })();*/
 });
+
+```
+
+**[async/await/Promise式逻辑代码**
+```js
+var Ebatis          = require('ebatis');
+var SqlChainFactory = Ebatis.SqlChainFactory;
+
+
+var ebatis = Ebatis();
+
+// set root path
+ebatis.setRootPath(__dirname);
+
+//ebatis.loadConfig(ebatis_config);
+ebatis.loadConfigFile('./ebatis_config.yml');
+
+// 开启开发模式，自动生成Mapper的js接口文件
+ebatis.dev(true);
+
+process.on('uncaughtException',function(e){
+    console.log(e.stack);
+});
+
+(async function(){
+    
+    // 当ebatis完成时，调用
+    await ebatis.finish.promise();
+    
+    // 导入Mapper的js接口文件
+    var UserMapper      = require('./sql/user');
+    
+    console.log('finish');
+    console.time('use time');
+    
+    var sqlChain = SqlChainFactory.createSqlChain();
+    // 获取user命名空间下getUsers的Mapper
+    var getUsers = sqlChain.getMapper('user.getUsers');
+    // or
+    var getUsers = ebatis.getMapper('user.getUsers');
+
+    console.time('one');
+
+    // 单独执行的动态sql没有事务
+    getUsers.param.promise({id : 20}).then((list)=>{
+        console.log('list');
+        console.log(list);
+    });
+
+    await sqlChain.exec.promise('select * from t_user where id = 2');
+    var users = await sqlChain.exec.promise(UserMapper.getUsers({id : 100}));
+    console.log(users);
+    console.log('getAllUsers');
+
+    /*(async function(){
+        try {
+            let scope = ebatis.getScope();
+            let getUsers = ebatis.getMapper('user.getUsers');
+            let a = await getUsers.param.promise({id : 100});
+            console.log(a);
+        }catch(e){
+            console.log(e);
+        }
+    })();*/
+    
+})();
 
 ```
