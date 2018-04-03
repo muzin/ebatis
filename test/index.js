@@ -45,7 +45,7 @@ ebatis.finish(function(){
 console.time('g sql')
     let s = getUsers.toFunction()({id:20});
     console.timeEnd('g sql');
-    sqlChain
+    /*sqlChain
         .exec(UserMapper.getUsers({id : 100}))
         .exec('select * from t_user where id = 2')
         .exec(s, function(err,result){
@@ -58,14 +58,31 @@ console.time('g sql')
 
 
                     sqlChain.close();
-                })/*.end(function(err, scope){
+                })/!*.end(function(err, scope){
                     console.log('end');
                     console.log(scope);
                     console.timeEnd('use time');
-                });*/
+                });*!/
             },3000)
 
+        });*/
+
+
+    sqlChain
+        .exec(UserMapper.getUsers({id : 100}))
+        .exec('select * from t_user where id = 2')
+        .exec(function(){
+
+            console.log(123);
+
+            throw 'str';
+
+
+        })
+        .end(function(){
+            console.log('end')
         });
+
 
 
     /*(async function(){
