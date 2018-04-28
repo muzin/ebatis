@@ -67,7 +67,7 @@ exports = module.exports = {
         _name : 'default',                 // 数据源名称, 默认为 'default'
         _type : 'mysql',                   // 数据源类型, (mysql), 必须
         _mode : 'pool',                    // 数据源模式, (connection | pool), 必须
-        hostname : '127.0.0.1',            // 其他参数参考mysql模块的配置信息
+        host : '127.0.0.1',            // 其他参数参考mysql模块的配置信息
         user : 'root',
         password : '**********',
         database : 'test'
@@ -90,7 +90,7 @@ exports = module.exports = {
         "_name" : "default",                
         "_type" : "mysql",
         "_mode" : "pool",
-        "hostname" : "127.0.0.1",
+        "host" : "127.0.0.1",
         "user" : "root",
         "password" : "**********",
         "database" : "test"
@@ -112,7 +112,7 @@ datasource :
   _name : default           
   _type : mysql  
   _mode : pool
-  hostname : 127.0.0.1
+  host : 127.0.0.1
   user : root
   password : **********
   database : test
