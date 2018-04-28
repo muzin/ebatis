@@ -7,7 +7,7 @@ datasource :                                # 数据源配置信息
   _name : default                           # 数据源名称
   _type : mysql                             # 数据源类型 (暂时只支持mysql)
   _mode : pool                              # 数据源模式  connection | pool | cluster, default connection
-  hostname : 127.0.0.1                      # 数据源ip地址
+  host : 127.0.0.1                      # 数据源ip地址
   user : root
   password : **********
   database : test

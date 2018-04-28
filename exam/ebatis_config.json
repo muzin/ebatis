@@ -3,7 +3,7 @@
         "_name" : "default",
         "_type" : "mysql",
         "_mode" : "pool",
-        "hostname" : "127.0.0.1",
+        "host" : "127.0.0.1",
         "user" : "root",
         "password" : "**********",
         "database" : "test",

@@ -31,7 +31,7 @@ datasource : {
     _name : 'default',
     _type : 'mysql',                    // 数据库类型
     _mode : 'pool',                     // 模式支持 connection(单个连接) | pool（连接池） | cluster(集群，暂不支持), 默认模式: connection
-    hostname : '127.0.0.1',
+    host : '127.0.0.1',
     user : 'root',
     password : '**********',
     database : 'test',
@@ -45,7 +45,7 @@ datasource : [{
     _name : 'default',
     _type : 'mysql',                    // 数据库类型
     _mode : 'pool',                     // 模式支持 connection(单个连接) | pool（连接池） | cluster(集群，暂不支持), 默认模式: connection
-    hostname : '127.0.0.1',
+    host : '127.0.0.1',
     user : 'root',
     password : '**********',
     database : 'test',
@@ -55,7 +55,7 @@ datasource : [{
     _name : 'db1',
     _type : 'mysql',                    // 数据库类型
     _mode : 'connection',                     // 
-    hostname : '127.0.0.1',
+    host : '127.0.0.1',
     user : 'root',
     password : '**********',
     database : 'test',
@@ -114,7 +114,7 @@ exports = module.exports = {
         _name : 'default',
         _type : 'mysql',                    // 数据库类型
         _mode : 'pool',                     // 模式支持 connection(单个连接) | pool（连接池） | cluster(集群，暂不支持), 默认模式: connection
-        hostname : '127.0.0.1',
+        host : '127.0.0.1',
         user : 'root',
         password : '**********',
         database : 'test',
@@ -127,16 +127,16 @@ exports = module.exports = {
             _name : 'db1',
             _type : 'mysql',
             _mode : ' connection', 
-            hostname : '127.0.0.1',
-            username : 'root',
+            host : '127.0.0.1',
+            user : 'root',
             password : '**********',
         },
         {
             _name : 'db2',
             _type : 'mysql',
             _mode : ' connection',
-            hostname : '127.0.0.1',
-            username : 'root',
+            host : '127.0.0.1',
+            user : 'root',
             password : '**********',
         }
     ],
@@ -176,7 +176,7 @@ exports = module.exports = {
         "_name" : "default",                
         "_type" : "mysql",
         "_mode" : "pool",
-        "hostname" : "127.0.0.1",
+        "host" : "127.0.0.1",
         "user" : "root",
         "password" : "**********",
         "database" : "test"
@@ -198,7 +198,7 @@ datasource :
   _name : default           
   _type : mysql  
   _mode : pool
-  hostname : 127.0.0.1
+  host : 127.0.0.1
   user : root
   password : **********
   database : test

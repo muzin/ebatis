@@ -4,14 +4,14 @@ exports = module.exports = {
         _name : 'default',
         _type : 'mysql',
         _mode : 'pool',
-        hostname : '127.0.0.1',
+        host : '127.0.0.1',
         user : 'root',
         password : '**********',
         database : 'test',
         connectionLimit : 50
     },
     sql : {
-        mapper : `./*.xml`,
+        mapper : './*.xml',
     },
     sqlchain : {
         transaction : true,

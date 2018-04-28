@@ -63,7 +63,7 @@ exports = module.exports = {
         _name : 'default',                 // datasource name, default 'default'
         _type : 'mysql',                   // datasource type, requires
         _mode : 'pool',                    // datasource mode, [connection | pool], requires
-        hostname : '127.0.0.1',            // other parameter refence mysql configuration
+        host : '127.0.0.1',            // other parameter refence mysql configuration
         user : 'root',
         password : '**********',
         database : 'test'
@@ -86,7 +86,7 @@ exports = module.exports = {
         "_name" : "default",                
         "_type" : "mysql",
         "_mode" : "pool",
-        "hostname" : "127.0.0.1",
+        "host" : "127.0.0.1",
         "user" : "root",
         "password" : "**********",
         "database" : "test"
@@ -108,7 +108,7 @@ datasource :
   _name : default           
   _type : mysql  
   _mode : pool
-  hostname : 127.0.0.1,
+  host : 127.0.0.1,
   user : root,
   password : **********
   database : test
