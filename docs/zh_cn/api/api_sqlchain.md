@@ -25,7 +25,30 @@ exec函数支持三种格式的参数：
 
 #### exec.promise(sql:string[[,param:array])
 `exec`函数Promise化。
+
 参数同`exec`函数
+
+> 注：Promise化的函数调用时需要在前面加`await`关键字来得到结果，否则返回Promise对象
+
+#### findOne(sql:string[[,param:array], callback:function])
+
+findOne函数支持三种格式的参数：
+
+**sql, param(可选), callback(可选)**
+
+    sql:string[[,param:array], callback:function]
+
+**sql对象, callback(可选)**
+
+    {sql:string, values:array}[,callback:function])
+
+
+#### findOne.promise(sql:string[[,param:array])
+`findOne`函数Promise化。
+
+参数同`findOne`函数
+
+> 注：调用时需要在前面加`await`关键字来得到结果，否则返回Promise对象
 
 #### end([callback:function])
 SqlChain执行完毕后设置的回调函数, `end`函数调用后会立即执行。

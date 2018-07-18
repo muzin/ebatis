@@ -52,4 +52,7 @@ var getUsers = sqlChain.getMapper('user.getUsers');
 getUsers.param.promise({id : 10}).then((list)=>{
     console.log('list');
     console.log(list);
-});         
+});   
+```
+
+> 注：调用时需要在前面加`await`关键字来得到结果，否则返回Promise对象
