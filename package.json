@@ -33,7 +33,7 @@
     "node": ">= 6.4.0"
   },
   "devDependencies": {
-    "mocha": "^5.2.0",
+    "mocha": "^6.1.4",
     "mockjs": "^1.0.1-beta3"
   }
 }
