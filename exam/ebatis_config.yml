@@ -15,5 +15,5 @@ sql :
 
 sqlchain :
   transaction : true
-  timeout : 3000
+  timeout : -1
   printsql : false
