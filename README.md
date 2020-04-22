@@ -1,5 +1,7 @@
 # ebatis
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/muzin/ebatis.svg)](https://greenkeeper.io/)
+
 Ebatis is a relational database data access framework For Node.js.
 
 The biggest feature of ebatis is to support dynamic SQL, transaction control, simple configuration and easy to handle.
